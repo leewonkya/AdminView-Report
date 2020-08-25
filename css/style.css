@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+/*# sourceMappingURL=style.css.map */
