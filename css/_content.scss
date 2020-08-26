@@ -1,5 +1,13 @@
 .navbar {
     box-shadow: $shadow;
+    #searchItem {
+        font-family: 'Times New Roman', Times, serif;
+        font-size-adjust: $text-size;
+    }
+    #searchItem:focus {
+        width: 450px !important;
+        transition: all .5s !important;
+    }
 }
 
 .wrapper {
@@ -10,7 +18,7 @@
         position: fixed;
         min-width: 250px;
         max-width: 250px;
-        background-color: #fff;
+        background-color: rgb(243, 243, 243);
         height: 100vh;
         text-decoration: none;
         box-shadow: $shadow;
@@ -23,15 +31,28 @@
             cursor: pointer;
             padding: 10px 15px;
             border-bottom: solid .5px $border-color;
+            &:hover {
+                background-color: #fff;
+                transition: all .5s;
+            }
+            .isActiveSidebar {
+                background-color: #fff;
+                box-shadow: $shadow-active;
+            }
+        }
+        .isActiveSidebar {
+            background-color: #fff;
+            box-shadow: $shadow-active;
         }
         .sidebar-collapse {
             position: absolute;
-            top: 40%;
-            right: -4%;
+            top: 0;
+            left: 0;
+            z-index: 99999;
             height: 100px;
-            line-height: 6;
             background-color: #fff;
             cursor: pointer;
+            line-height: 6;
         }
     }
     .content {
