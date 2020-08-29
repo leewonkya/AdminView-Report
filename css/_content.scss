@@ -1,4 +1,7 @@
 .navbar {
+    .rotateIcon {
+        transform: rotateX(-180deg);
+    }
     box-shadow: $shadow;
     #searchItem {
         font-family: 'Times New Roman', Times, serif;
@@ -6,57 +9,70 @@
     }
     #searchItem:focus {
         width: 450px !important;
-        transition: all .5s !important;
+        transition: all .5s ease !important;
     }
 }
 
 .wrapper {
     display: flex;
     width: 100%;
-    .sidebar {
-        transition: all .3s;
+    nav {
         position: fixed;
-        min-width: 250px;
+        height: 100%;
         max-width: 250px;
-        background-color: rgb(243, 243, 243);
-        height: 100vh;
-        text-decoration: none;
+        min-width: 250px;
         box-shadow: $shadow;
-        &-header {
-            padding: 10px 15px;
-            border-bottom: solid .5px $border-color;
-            cursor: pointer;
+        transition: .5s ease-in-out;
+        &.isActiveSideBar {
+            margin-left: -250px;
         }
-        ul .nav-item {
-            cursor: pointer;
-            padding: 10px 15px;
-            border-bottom: solid .5px $border-color;
-            &:hover {
-                background-color: #fff;
-                transition: all .5s;
+        ul {
+            li {
+                line-height: 45px;
+                border-top: solid 1px rgba($color: #000000, $alpha: .1);
+                cursor: pointer;
+                &.isActiveMenu {
+                    border-right: 5px solid $primary-color;
+                }
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                    padding-left: 20px;
+                    font-size: 14px;
+                    font-family: $poppins;
+                    font-weight: 500;
+                    position: relative;
+                    display: block;
+                    transition: all .3s;
+                    &:hover {
+                        background-color: rgba($color: #000000, $alpha: .1);
+                        border-left: solid 4px $primary-color;
+                    }
+                    &:hover>nav ul li span {
+                        margin-left: 20px;
+                    }
+                    .isActiveIcon {
+                        transform: rotateZ(-90deg);
+                    }
+                }
+                a.components-sub--link {
+                    padding-left: 45px;
+                    // &::before {
+                    //     position: absolute;
+                    //     content: "\f105";
+                    //     left: 0;
+                    //     transition: .5s ease;
+                    //     visibility: hidden;
+                    // }
+                    // &:hover::before {
+                    //     visibility: visible;
+                    //     left: 15px;
+                    // }
+                }
+                &:last-child {
+                    border-bottom: solid 1px rgba($color: #000000, $alpha: .1);
+                }
             }
-            .isActiveSidebar {
-                background-color: #fff;
-                box-shadow: $shadow-active;
-            }
         }
-        .isActiveSidebar {
-            background-color: #fff;
-            box-shadow: $shadow-active;
-        }
-        .sidebar-collapse {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 99999;
-            height: 100px;
-            background-color: #fff;
-            cursor: pointer;
-            line-height: 6;
-        }
-    }
-    .content {
-        width: 100%;
-        height: 500vh;
     }
 }

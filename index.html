@@ -19,17 +19,21 @@
 <body>
     <!-- Header -->
     <nav class="navbar navbar-expand navbar-light bg-light fixed-top">
-
-        <div class="sidebar-toggle mr-3 btn btn-light" type="button" data-target=".sidebar">
+        <div class="sidebar-toggle mr-2 btn btn-light" type="button" data-target=".sidebar">
             <i class="fas fa-angle-double-left" id="icon"></i>
         </div>
-        <a class="navbar-brand" href="#">Content</a>
+        <a class="navbar-brand" href="#">Logo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="true" aria-label="Toggle navigation"></button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="nav  bar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <form action="#" class="form-inline my-2 my-lg-0 position-relative">
-                        <input id="searchItem" type="text" style="width: 350px;" class="form-control search-box mr-sm-2" placeholder="Tìm Kiếm">
+                        <div class="input-group">
+                            <input id="searchItem" type="text" style="width: 350px;" class="form-control search-box" placeholder="Tìm Kiếm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text btn"><i class="fas fa-search"></i></span>
+                            </div>
+                        </div>
                     </form>
                 </li>
                 <li class="nav-item dropdown">
@@ -38,13 +42,17 @@
                         <div class="notification-quantity position-absolute px-1 text-light" style="background-color: #ff6859;
                         background-image: linear-gradient(to bottom,#ff6859,#ea3e2f) !important; font-size: 9px; border-radius: 4px; top: 0; right: 0;">3</div>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right mt-2 text-center" aria-labelledby="dropdownNotification" style="max-width: 350px; line-break: auto;">
-                        <div class="notification__title dropdown-item pb-2 my-2 border-bottom">Không có thông báo mới</div>
+                    <div class="dropdown-menu dropdown-menu-right mt-1 text-center" aria-labelledby="dropdownNotification" style="max-width: 350px; line-break: auto;">
+                        <div class="notification__title dropdown-item pb-2 my-2 border-bottom">Không có thông báo mới
+                        </div>
 
                         <ul>
-                            <li class="dropdown-item text-left" style="text-overflow: ellipsis; overflow: hidden;">1111111111111111111111111111111111111111111111111111111111</li>
-                            <li class="dropdown-item text-left" style="text-overflow: ellipsis; overflow: hidden;">1111111111111111111111111111111111111111111111111111111111</li>
-                            <li class="dropdown-item text-left" style="text-overflow: ellipsis; overflow: hidden;">1111111111111111111111111111111111111111111111111111111111</li>
+                            <li class="dropdown-item text-left" style="text-overflow: ellipsis; overflow: hidden;">
+                                11111111111111111111111111111111111111111111111111111111111111111111111</li>
+                            <li class="dropdown-item text-left" style="text-overflow: ellipsis; overflow: hidden;">
+                                1111111111111111111111111111111111111111111111111111111111</li>
+                            <li class="dropdown-item text-left" style="text-overflow: ellipsis; overflow: hidden;">
+                                1111111111111111111111111111111111111111111111111111111111</li>
                         </ul>
                     </div>
                 </li>
@@ -57,14 +65,14 @@
                 </li>
                 <li class="nav-item dropdown mx-3" style="display:inherit">
                     <img src="/image/17241-200.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="avata" style="width: 35px;">
-                    <a class="nav-link dropdown mx-2 text-dark" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Xin chào,
+                    <a class="nav-link dropdown mx-2 text-dark" href="#" id="DropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi,
                         <span class="d-inline-block text-dark">Abc</span>
                     </a>
-                    <div class="dropdown-menu mr-2 dropdown-menu-right" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
-                        <a class="dropdown-item" href="#">Item 3</a>
-                        <a class="dropdown-item" href="#">Item 4</a>
+                    <div class="dropdown-menu mr-2 dropdown-menu-right" aria-labelledby="DropdownProfile">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Language</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Log out</a>
                     </div>
                 </li>
             </ul>
@@ -75,33 +83,63 @@
 
     <!-- Main -->
     <div class="wrapper">
+        <!-- sidebar -->
         <nav class="sidebar">
             <div class="py-3">&nbsp;</div>
-            <div class="sidebar-header isActiveSidebar">
-                <a href="#">Dash board</a>
-            </div>
             <ul class="list-unstyled">
-                <li class="nav-item">
-                    <div class="nav-item__content">
-                        <i class=" fas fa-home mr-2 "></i> Home
-                    </div>
-
+                <li class="components isActiveMenu">
+                    <a class="components-item" href="#"><i class="fas fa-chart-line"></i> Dash Board</a>
                 </li>
-                <li class="nav-item"><i class="fas fa-home mr-2"></i> Home</li>
-                <li class="nav-item"><i class="fas fa-home mr-2"></i> Home</li>
-                <li class="nav-item"><i class="fas fa-home mr-2"></i> Home</li>
-                <li class="nav-item"><i class="fas fa-home mr-2"></i> Home</li>
-                <li class="nav-item"><i class="fas fa-home mr-2"></i> Home</li>
-                <li class="nav-item"><i class="fas fa-home mr-2"></i> Home</li>
+                <!-- <div class="dropdown-divider "></div> -->
+                <li class="components">
+                    <a class="components-item" href="#dropdown-page1" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-home"></i> Home
+                        <span id="dropdown-icon" class="float-right mr-3">
+                            <i class="fas fa-angle-left"></i>
+                        </span>
+                        <span class="message-quantity float-right mr-2">3</span>
+                    </a>
+
+                    <ul id="dropdown-page1" class="list-unstyled components-sub collapse">
+                        <li class="components-sub__child">
+                            <span class="float-left ml-2">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                            <a class="components-sub--link" href="#">Item</a></li>
+                        <li class="components-sub__child">
+
+                            <a class="components-sub--link" href="#">Item</a></li>
+                    </ul>
+                </li>
+                <li class="components">
+                    <a class="components-item" href="#dropdown-page2" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-chart-line">
+                        </i> Services
+                        <span class="float-right mr-3">
+                            <i id="dropdown-icon" class="fas fa-angle-left"></i>
+                        </span>
+                    </a>
+
+                    <ul id="dropdown-page2" class="list-unstyled components-sub collapse">
+                        <li class="components-sub__child">
+                            <a href="#" class="components-sub--link">Item</a>
+                        </li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Item</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Item</a></li>
+                    </ul>
+                </li>
+                <li class="components">
+                    <a class="components-item" href="#"><i class="fas fa-street-view"></i> About us</a>
+                </li>
+                <li class="components">
+                    <a class="components-item" href="#"><i class="fas fa-phone-square"></i> Contact</a>
+                </li>
             </ul>
-            <!-- <div class="sidebar-collapse ">
-                <i class="fas fa-angle-left " id="icon "></i>
-            </div> -->
         </nav>
-        <!-- <div class="content ">
-            <div class="py-3 ">&nbsp;</div>
-            some
-        </div> -->
+        <!-- End sidebar -->
+        <!-- main content -->
+
+        <!-- End main content -->
     </div>
     <!-- End Main -->
 
@@ -112,19 +150,26 @@
     <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js " integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a " crossorigin="anonymous "></script>
     <script>
         $(document).ready(function() {
+            $("nav ul li.components").on("click", function() {
+                $(this).addClass("isActiveMenu").siblings().removeClass("isActiveMenu");
+            })
+            $("nav ul li.components").click(function() {
+                var i = $(this).children("#dropdown-icon").siblings();
+                i.toggleClass("isActiveIcon");
+            })
             $(".sidebar-toggle").click(function() {
-                if ($(".sidebar").hasClass("isActive")) {
-                    $(".sidebar").css("margin-left", "0");
-                    $(".sidebar").removeClass("isActive");
-                    $("#icon").addClass("fa-angle-double-left");
-                    $("#icon").removeClass("fa-angle-double-right ");
+                $("nav.sidebar").toggleClass("isActiveSideBar");
+                var i = $("#icon");
+                var l = "fa-angle-double-left";
+                var r = "fa-angle-double-right";
+                if (i.hasClass("fa-angle-double-left")) {
+                    i.addClass(r);
+                    i.removeClass(l);
                 } else {
-                    $(".sidebar").css("margin-left", "-250px");
-                    $(".sidebar").addClass("isActive");
-                    $("#icon").removeClass("fa-angle-double-left");
-                    $("#icon").addClass("fa-angle-double-right");
+                    i.removeClass(r);
+                    i.addClass(l);
                 }
-            });
+            })
         });
     </script>
 </body>
