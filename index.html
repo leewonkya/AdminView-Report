@@ -18,18 +18,21 @@
 
 <body>
     <!-- Header -->
-    <nav class="navbar navbar-expand navbar-light bg-light fixed-top">
-        <div class="sidebar-toggle mr-2 btn btn-light" type="button" data-target=".sidebar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="sidebar-toggle mr-2 btn btn-light" type="button" onclick="collapseFunc()">
             <i class="fas fa-angle-double-left" id="icon"></i>
         </div>
         <a class="navbar-brand" href="#">Logo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="true" aria-label="Toggle navigation"></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="nav  bar-nav ml-auto mt-2 mt-lg-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <form action="#" class="form-inline my-2 my-lg-0 position-relative">
                         <div class="input-group">
-                            <input id="searchItem" type="text" style="width: 350px;" class="form-control search-box" placeholder="Tìm Kiếm">
+                            <input id="searchItem" type="text" class="form-control search-box" placeholder="Tìm Kiếm">
                             <div class="input-group-prepend">
                                 <span class="input-group-text btn"><i class="fas fa-search"></i></span>
                             </div>
@@ -85,7 +88,6 @@
     <div class="wrapper">
         <!-- sidebar -->
         <nav class="sidebar">
-            <div class="py-3">&nbsp;</div>
             <ul class="list-unstyled">
                 <li class="components isActiveMenu">
                     <a class="components-item" href="#"><i class="fas fa-chart-line"></i> Dash Board</a>
@@ -95,20 +97,14 @@
                     <a class="components-item" href="#dropdown-page1" data-toggle="collapse" aria-expanded="false">
                         <i class="fas fa-home"></i> Home
                         <span id="dropdown-icon" class="float-right mr-3">
-                            <i class="fas fa-angle-left"></i>
+                            <i class="fas fa-angle-down"></i>
                         </span>
                         <span class="message-quantity float-right mr-2">3</span>
                     </a>
 
                     <ul id="dropdown-page1" class="list-unstyled components-sub collapse">
-                        <li class="components-sub__child">
-                            <span class="float-left ml-2">
-                                <i class="fas fa-angle-right"></i>
-                            </span>
-                            <a class="components-sub--link" href="#">Item</a></li>
-                        <li class="components-sub__child">
-
-                            <a class="components-sub--link" href="#">Item</a></li>
+                        <li class="components-sub__child"><a class="components-sub--link" href="#">Item</a></li>
+                        <li class="components-sub__child"><a class="components-sub--link" href="#">Item</a></li>
                     </ul>
                 </li>
                 <li class="components">
@@ -116,20 +112,19 @@
                         <i class="fas fa-chart-line">
                         </i> Services
                         <span class="float-right mr-3">
-                            <i id="dropdown-icon" class="fas fa-angle-left"></i>
+                            <i id="dropdown-icon" class="fas fa-angle-down"></i>
                         </span>
                     </a>
 
                     <ul id="dropdown-page2" class="list-unstyled components-sub collapse">
-                        <li class="components-sub__child">
-                            <a href="#" class="components-sub--link">Item</a>
-                        </li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Item</a></li>
                         <li class="components-sub__child"><a href="#" class="components-sub--link">Item</a></li>
                         <li class="components-sub__child"><a href="#" class="components-sub--link">Item</a></li>
                     </ul>
                 </li>
                 <li class="components">
                     <a class="components-item" href="#"><i class="fas fa-street-view"></i> About us</a>
+
                 </li>
                 <li class="components">
                     <a class="components-item" href="#"><i class="fas fa-phone-square"></i> Contact</a>
@@ -138,30 +133,287 @@
         </nav>
         <!-- End sidebar -->
         <!-- main content -->
+        <div class="clear-fix main-content pt-2">
+            <div class="container-fluid">
+                <div class="heading-box p-4 w-100 d-flex">
+                    <div class="heading-box__icon float-left text-center">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="heading-box__content">
+                        <div class="heading-box__title">I'm Dash board</div>
+                        <div class="heading-box__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
 
-        <!-- End main content -->
-    </div>
-    <!-- End Main -->
+                    </div>
+                </div>
+                <div class="content-box w-100">
+                    <div class="content-box__title alert alert-light text-dark">First content box</div>
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <div class="card card-bg--danger text-light">
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">
+                                        <div class="card-text__quantity">5</div>
+                                        <div class="card-text__message">report</div>
+                                    </p>
+                                    <a href="#" class="btn btn-light btn--check">Check it</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <div class="card card-bg--warning text-light">
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">
+                                        <div class="card-text__quantity">5</div>
+                                        <div class="card-text__message">report</div>
+                                    </p>
+                                    <a href="#" class="btn btn-light btn--check">Check it</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <div class="card card-bg--success text-light">
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">
+                                        <div class="card-text__quantity">5</div>
+                                        <div class="card-text__message">report</div>
+                                    </p>
+                                    <a href="#" class="btn btn-light btn--check">Check it</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <div class="card card-bg--night text-light">
+                                <div class="card-body text-center">
+                                    <h4 class="card-title">Title</h4>
+                                    <p class="card-text">
+                                        <div class="card-text__quantity">5</div>
+                                        <div class="card-text__message">report</div>
+                                    </p>
+                                    <a href="#" class="btn btn-light btn--check">Check it</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-box w-100">
+                        <div class="content-box__title alert alert-light text-dark">Second content box</div>
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <div class="card card-bg--blue-primary text-light">
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title">Title</h4>
+                                        <p class="card-text">
+                                            <div class="card-text__quantity">5</div>
+                                            <div class="card-text__message">report</div>
+                                        </p>
+                                        <a href="#" class="btn btn-light btn--check">Check it</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <div class="card card-bg--primary text-light">
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title">Title</h4>
+                                        <p class="card-text">
+                                            <div class="card-text__quantity">5</div>
+                                            <div class="card-text__message">report</div>
+                                        </p>
+                                        <a href="#" class="btn btn-light btn--check">Check it</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <div class="card card-bg--purple text-light">
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title">Title</h4>
+                                        <p class="card-text">
+                                            <div class="card-text__quantity">5</div>
+                                            <div class="card-text__message">report</div>
+                                        </p>
+                                        <a href="#" class="btn btn-light btn--check">Check it</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <div class="card card-bg--orange text-light">
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title">Title</h4>
+                                        <p class="card-text">
+                                            <div class="card-text__quantity">5</div>
+                                            <div class="card-text__message">report</div>
+                                        </p>
+                                        <a href="#" class="btn btn-light btn--check">Check it</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-2">&nbsp;</div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="card mb-3">
+                                    <div class="card-header">
+                                        <div class="card-header--title"><span class="pr-2"><i class="fas fa-calendar-check"></i></span> Calendar time working</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="calendar w-100 h-100">
+                                            <div class="calendar-heading">
+                                                <div class="w-100">
+                                                    <div class="form-row">
+                                                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                                            <a href="#" class="btn btn-sm btn-primary text-white mt-1">Day</a>
+                                                            <a href="#" class="btn btn-sm btn-primary text-white mt-1">Week</a>
+                                                        </div>
 
-    <!-- Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js "></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js " integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a " crossorigin="anonymous "></script>
-    <script>
-        $(document).ready(function() {
-            $("nav ul li.components").on("click", function() {
-                $(this).addClass("isActiveMenu").siblings().removeClass("isActiveMenu");
-            })
-            $("nav ul li.components").click(function() {
-                var i = $(this).children("#dropdown-icon").siblings();
-                i.toggleClass("isActiveIcon");
-            })
-            $(".sidebar-toggle").click(function() {
-                $("nav.sidebar").toggleClass("isActiveSideBar");
+                                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                            <div class="form-group">
+                                                                <select class="form-control">
+                                                            <option>lorem</option>
+                                                            <option>lorem</option>
+                                                            <option>lorem</option>
+                                                            <option>lorem</option>
+                                                            <option>lorem</option>
+                                                          </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                                            <div class="list-inline mt-1">
+                                                                <div class="list-inline-item"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-chevron-left    "></i></a></div>
+                                                                <div class="list-inline-item"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-chevron-right"></i></a></div>
+                                                                <div class="list-inline-item">
+                                                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#calendar-add"><i class="fas fa-plus-circle"></i></button>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="calendar-add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                          </button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    ...
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="list-inline-item"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-calendar-check"></i></a></div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="calendar-content w-100 text-center py-2">
+                                                The day from <span> 1 </span> to <span> 1 </span>
+                                            </div>
+                                            <div class="row">
+                                                <div class="w-100 bg-light py-2 pl-3">I'm day</div>
+                                                <div class="w-100 pl-3 py-2 d-flex flex-row">
+                                                    <div class="mr-1" style="width: 200px;">I'm Time</div>
+                                                    <div class="pr-2">
+                                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore repellat suscipit explicabo animi, quod natus dolore eaque corporis nisi, amet iusto voluptatem ea odit, reprehenderit facere maxime eos adipisci tenetur.
+                                                        <span class="d-block text-success">I'm status</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="w-100 bg-light py-2 pl-3">I'm day</div>
+                                                <div class="w-100 pl-3 py-2 d-flex flex-row">
+                                                    <div class="mr-1" style="width: 200px;">I'm Time</div>
+                                                    <div class="pr-2">
+                                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore repellat suscipit explicabo animi, quod natus dolore eaque corporis nisi, amet iusto voluptatem ea odit, reprehenderit facere maxime eos adipisci tenetur.
+                                                        <span class="d-block text-success">I'm status</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="w-100 bg-light py-2 pl-3">I'm day</div>
+                                                <div class="w-100 pl-3 py-2 d-flex flex-row">
+                                                    <div class="mr-1" style="width: 200px;">I'm Time</div>
+                                                    <div class="pr-2">
+                                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore repellat suscipit explicabo animi, quod natus dolore eaque corporis nisi, amet iusto voluptatem ea odit, reprehenderit facere maxime eos adipisci tenetur.
+                                                        <span class="d-block text-success">I'm status</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="card-header--title"><span class="pr-2"><i class="fas fa-calendar-check"></i></span> Calendar time working</div>
+                                    </div>
+                                    <div class="card-body text-left w-100">
+                                        <div class="list-group list-group-flush">
+                                            <a href="#" class="list-group-item list-group-item-action"><span class="mr-2"><i class="far fa-file-alt"></i></span>Cras justo odio</a>
+                                            <a href="#" class="list-group-item list-group-item-action"><span class="mr-2"><i class="far fa-file-alt"></i></span>Dapibus ac facilisis in</a>
+                                            <a href="#" class="list-group-item list-group-item-action"><span class="mr-2"><i class="far fa-file-alt"></i></span>Morbi leo risus</a>
+                                            <a href="#" class="list-group-item list-group-item-action"><span class="mr-2"><i class="far fa-file-alt"></i></span>Porta ac consectetur ac</a>
+                                            <a href="#" class="list-group-item list-group-item-action"><span class="mr-2"><i class="far fa-file-alt"></i></span>Vestibulum at eros</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- End main content -->
+        </div>
+        <!-- End Main -->
+
+        <!-- Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js "></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js " integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a " crossorigin="anonymous "></script>
+        <script>
+            $(document).ready(function() {
+                $("nav ul li.components").click(function() {
+                    $(this).addClass("isActiveMenu").siblings().removeClass("isActiveMenu");
+
+                })
+            });
+
+
+            function collapseFunc() {
+                var n = $("nav.sidebar");
+                var m = $(".main-content");
                 var i = $("#icon");
                 var l = "fa-angle-double-left";
                 var r = "fa-angle-double-right";
+                var act = "isActiveSideBar";
+                if (n.hasClass(act)) {
+                    n.removeClass(act);
+                    n.css("margin-left", "0");
+                    m.css("margin-left", "250px");
+                } else {
+                    n.addClass(act);
+                    n.css("margin-left", "-250px");
+                    m.css("margin-left", "0");
+                }
+
                 if (i.hasClass("fa-angle-double-left")) {
                     i.addClass(r);
                     i.removeClass(l);
@@ -169,9 +421,8 @@
                     i.removeClass(r);
                     i.addClass(l);
                 }
-            })
-        });
-    </script>
+            }
+        </script>
 </body>
 
 </html>
