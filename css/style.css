@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,700;1,400&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -15,12 +15,14 @@ body {
 }
 
 body {
-  background-color: #f2f2f2;
+  background-color: #fff;
 }
 
 .navbar {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  padding: 0 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size-adjust: 13px;
+  background: #438eb9 !important;
 }
 
 .navbar .rotateIcon {
@@ -29,26 +31,83 @@ body {
 }
 
 .navbar #searchItem {
-  font-family: 'Times New Roman', Times, serif;
-  font-size-adjust: 13px;
-  width: 350px;
+  width: 250px;
 }
 
 .navbar #searchItem:focus {
-  width: 450px !important;
+  width: 350px !important;
   -webkit-transition: all .5s ease !important;
   transition: all .5s ease !important;
 }
 
+.navbar ul.navbar-nav .nav-item {
+  margin-top: 3px;
+  margin-right: 5px;
+}
+
+.navbar ul.navbar-nav .nav-item .notification,
+.navbar ul.navbar-nav .nav-item .unsigned {
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 4px !important;
+}
+
+.navbar ul.navbar-nav .nav-item .notification .badge,
+.navbar ul.navbar-nav .nav-item .unsigned .badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #ff1313;
+  padding: 2px 5px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.navbar ul.navbar-nav .nav-item .notification:hover,
+.navbar ul.navbar-nav .nav-item .unsigned:hover {
+  background-color: #1a7cb4;
+}
+
+.navbar ul.navbar-nav .user-box {
+  cursor: pointer;
+}
+
+.navbar ul.navbar-nav .user-box .user-avt {
+  width: 43px;
+  margin-right: 5px;
+}
+
+.navbar ul.navbar-nav .user-box .user-profile {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.navbar ul.navbar-nav .user-box .info-box {
+  color: #fff;
+  line-height: 16px;
+}
+
+.navbar ul.navbar-nav .user-box .info-box .user-name {
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 3px;
+}
+
 .wrapper {
-  margin-top: 3.5rem;
+  margin-top: 2.4rem;
   width: 100%;
 }
 
 .wrapper nav,
 .wrapper .main-content {
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .wrapper nav {
@@ -56,27 +115,51 @@ body {
   height: 100%;
   max-width: 250px;
   min-width: 250px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-  background: #fff;
+  border-right: solid 0.5px #e5e5e5;
+  background: rgba(242, 242, 242, 0.5);
+  z-index: 1;
+}
+
+.wrapper nav ul ul li.isActiveItem {
+  background-color: #F3F7FA;
+}
+
+.wrapper nav ul ul li.isActiveItem::before {
+  content: ">";
+  position: absolute;
+  left: 10px;
+  visibility: visible;
+  font-family: "Poppins", sans-serif;
+  color: red;
+  font-weight: bold;
+  z-index: 999;
+}
+
+.wrapper nav ul ul li.isActiveItem a {
+  color: #428bca;
 }
 
 .wrapper nav ul li {
-  line-height: 45px;
+  line-height: 35px;
   border-top: solid 1px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 .wrapper nav ul li.isActiveMenu {
-  border-right: 5px solid #428bca;
+  border-right: 3px solid #428bca;
+  background-color: #fff;
+}
+
+.wrapper nav ul li a.components-item {
+  text-transform: uppercase;
 }
 
 .wrapper nav ul li a {
   color: #343a40;
   text-decoration: none;
-  padding-left: 20px;
+  padding-left: 15px;
   font-size: 14px;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, serif;
   font-weight: 500;
   position: relative;
   display: block;
@@ -85,12 +168,7 @@ body {
 }
 
 .wrapper nav ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-left: solid 4px #428bca;
-}
-
-.wrapper nav ul li a:hover > nav ul li span {
-  margin-left: 20px;
+  color: #428bca;
 }
 
 .wrapper nav ul li a .isActiveIcon {
@@ -99,22 +177,21 @@ body {
 }
 
 .wrapper nav ul li a.components-sub--link {
-  padding-left: 45px;
+  padding-left: 30px;
 }
 
 .wrapper nav ul li a.components-sub--link::before {
   position: absolute;
   content: ">";
-  left: 0;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  left: 10px;
   visibility: hidden;
   font-size: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 .wrapper nav ul li a.components-sub--link:hover::before {
+  z-index: 100;
   visibility: visible;
-  left: 20px;
 }
 
 .wrapper nav ul li:last-child {
@@ -123,37 +200,6 @@ body {
 
 .wrapper .main-content {
   margin-left: 250px;
-}
-
-.wrapper .main-content .heading-box {
-  background-color: rgba(255, 255, 255, 0.75);
-}
-
-.wrapper .main-content .heading-box__icon {
-  width: 60px;
-  height: 60px;
-  font-size: 2rem;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-  line-height: 60px;
-  margin-right: 20px;
-  color: rgba(255, 192, 203, 0.7);
-  border-radius: 5px;
-  background: #fff;
-}
-
-.wrapper .main-content .heading-box__content {
-  width: 70%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.wrapper .main-content .heading-box__content .heading-box__title {
-  font-size: 20px;
-}
-
-.wrapper .main-content .content-box {
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
 
 .wrapper .main-content .content-box .card-bg--danger {
@@ -219,5 +265,20 @@ body {
 
 .wrapper .main-content .content-box .card-header--title {
   font-size: 17px;
+}
+
+.wrapper .main-content .content-box .card .calendar-day {
+  background: rgba(54, 57, 59, 0.1);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #428bca;
+}
+
+.wrapper .main-content .content-box .card .calendar-time {
+  font-weight: 500;
+}
+
+.wrapper .main-content .content-box .card .calendar-content {
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

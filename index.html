@@ -18,29 +18,51 @@
 
 <body>
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="sidebar-toggle mr-2 btn btn-light" type="button" onclick="collapseFunc()">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <button class="sidebar-toggle mr-2 btn btn-sm btn-light" type="button" onclick="collapseFunc()">
             <i class="fas fa-angle-double-left" id="icon"></i>
-        </div>
-        <a class="navbar-brand" href="#">Logo</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand text-white" href="#">Logo</a>
+        <button class="navbar-toggler btn text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars    "></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <form action="#" class="form-inline my-2 my-lg-0 position-relative">
+                    <form action="#" class="form-inline">
                         <div class="input-group">
-                            <input id="searchItem" type="text" class="form-control search-box" placeholder="Tìm Kiếm">
+                            <input id="searchItem" type="text" class="form-control form-control-sm search-box" placeholder="Tìm Kiếm">
                             <div class="input-group-prepend">
-                                <span class="input-group-text btn"><i class="fas fa-search"></i></span>
+                                <span class="input-group-text btn btn-sm"><i class="fas fa-search"></i></span>
                             </div>
                         </div>
                     </form>
                 </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="btn btn-light position-relative dropdown mx-2" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item">
+                    <a class="notification dropdown" id="dropdownIcon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span><i class="fas fa-bell"></i></span>
+                        <span><div class="badge">3</div></span>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <div class="unsigned">
+                        <span><i class="fas fa-globe-asia"></i></span>
+                        <span><div class="badge">3</div></span>
+                    </div>
+                </li>
+                <li class="nav-item user-box d-flex">
+                    <div class="user-avt">
+                        <img src="./image/avata.png" class="img-fluid user-profile rounded-circle img-rounded" alt="avatar">
+                    </div>
+                    <div class="info-box">
+                        <small class="">Hi,</small>
+                        <div class="user-name">Admin</div>
+                    </div>
+                </li>
+                <!-- <li class="nav-item mt-1 dropdown">
+                    <a href="#" class="btn btn-sm btn-light text-primary position-relative dropdown mx-2" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="far fa-bell"></i>
                         <div class="notification-quantity position-absolute px-1 text-light" style="background-color: #ff6859;
                         background-image: linear-gradient(to bottom,#ff6859,#ea3e2f) !important; font-size: 9px; border-radius: 4px; top: 0; right: 0;">3</div>
@@ -59,25 +81,27 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="btn btn-light position-relative mx-2">
+                <li class="nav-item mt-1">
+                    <a href="#" class="btn btn-sm text-white position-relative mx-2">
                         <div class="notification-quantity position-absolute px-1 text-light" style="background-color: #ff6859;
                         background-image: linear-gradient(to bottom,#ff6859,#ea3e2f) !important; font-size: 9px; border-radius: 4px; top: 0; right: 0;">3</div>
                         <i class="fas fa-globe-asia    "></i>
                     </a>
                 </li>
                 <li class="nav-item dropdown mx-3" style="display:inherit">
-                    <img src="/image/17241-200.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="avata" style="width: 35px;">
+
+                    <img src="./image/17241-200.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="avata" style="width: 35px; cursor: pointer;">
                     <a class="nav-link dropdown mx-2 text-dark" href="#" id="DropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi,
-                        <span class="d-inline-block text-dark">Abc</span>
-                    </a>
+                            <span class="d-inline-block text-dark">Abc</span>
+                        </a>
                     <div class="dropdown-menu mr-2 dropdown-menu-right" aria-labelledby="DropdownProfile">
                         <a class="dropdown-item" href="#">Profile</a>
                         <a class="dropdown-item" href="#">Language</a>
+
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Log out</a>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>
@@ -90,12 +114,12 @@
         <nav class="sidebar">
             <ul class="list-unstyled">
                 <li class="components isActiveMenu">
-                    <a class="components-item" href="#"><i class="fas fa-chart-line"></i> Dash Board</a>
+                    <a class="components-item" href="#"><i class="fas fa-chart-line"></i> Trang chủ</a>
                 </li>
-                <!-- <div class="dropdown-divider "></div> -->
+
                 <li class="components">
                     <a class="components-item" href="#dropdown-page1" data-toggle="collapse" aria-expanded="false">
-                        <i class="fas fa-home"></i> Home
+                        <i class="fas fa-home"></i> Tiện ích
                         <span id="dropdown-icon" class="float-right mr-3">
                             <i class="fas fa-angle-down"></i>
                         </span>
@@ -103,285 +127,62 @@
                     </a>
 
                     <ul id="dropdown-page1" class="list-unstyled components-sub collapse">
-                        <li class="components-sub__child"><a class="components-sub--link" href="#">Item</a></li>
-                        <li class="components-sub__child"><a class="components-sub--link" href="#">Item</a></li>
+                        <li class="components-sub__child"><a class="components-sub--link" href="#">Thông báo, sự kiện</a></li>
+                        <li class="components-sub__child"><a class="components-sub--link" href="#">Hỏi đáp</a></li>
                     </ul>
                 </li>
                 <li class="components">
                     <a class="components-item" href="#dropdown-page2" data-toggle="collapse" aria-expanded="false">
                         <i class="fas fa-chart-line">
-                        </i> Services
+                        </i> Báo cáo
                         <span class="float-right mr-3">
                             <i id="dropdown-icon" class="fas fa-angle-down"></i>
                         </span>
                     </a>
-
                     <ul id="dropdown-page2" class="list-unstyled components-sub collapse">
-                        <li class="components-sub__child"><a href="#" class="components-sub--link">Item</a></li>
-                        <li class="components-sub__child"><a href="#" class="components-sub--link">Item</a></li>
-                        <li class="components-sub__child"><a href="#" class="components-sub--link">Item</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Dự thảo báo cáo</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Kiểm duyệt báo cáo</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Tổng hợp báo cáo</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Kết suất báo cáo</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Theo dõi tình trạng báo cáo</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Xuất bản dữ liệu</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Tra cứu dữ liệu công bố</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Thống kê dữ liệu</a></li>
                     </ul>
                 </li>
                 <li class="components">
-                    <a class="components-item" href="#"><i class="fas fa-street-view"></i> About us</a>
+                    <a class="components-item" href="#dropdown-page3" data-toggle="collapse" aria-expanded="false">
+                        <i class="fas fa-chart-line"></i> Quản trị - phân quyền
+                        <span class="float-right mr-3">
+                            <i id="dropdown-icon" class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul id="dropdown-page3" class="list-unstyled components-sub collapse">
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Quản trị đơn vị</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Quản trị người dùng</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Thiết kế biểu mẫu</a></li>
+                        <li class="components-sub__child"><a href="#" class="components-sub--link">Phân quyền sử dụng</a></li>
+                    </ul>
+                </li>
 
-                </li>
-                <li class="components">
-                    <a class="components-item" href="#"><i class="fas fa-phone-square"></i> Contact</a>
-                </li>
             </ul>
         </nav>
         <!-- End sidebar -->
         <!-- main content -->
-        <div class="clear-fix main-content pt-2">
-            <div class="container-fluid">
-                <div class="heading-box p-4 w-100 d-flex">
-                    <div class="heading-box__icon float-left text-center">
-                        <i class="far fa-envelope"></i>
+        <div class="clear-fix main-content">
+            <div class="content-box w-100">
+                <div class="d-flex">
+                    <div class="w-75 bg-dark">
+                        hi
                     </div>
-                    <div class="heading-box__content">
-                        <div class="heading-box__title">I'm Dash board</div>
-                        <div class="heading-box__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-
-                    </div>
-                </div>
-                <div class="content-box w-100">
-                    <div class="content-box__title alert alert-light text-dark">First content box</div>
-                    <div class="row">
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                            <div class="card card-bg--danger text-light">
-                                <div class="card-body text-center">
-                                    <h4 class="card-title">Title</h4>
-                                    <p class="card-text">
-                                        <div class="card-text__quantity">5</div>
-                                        <div class="card-text__message">report</div>
-                                    </p>
-                                    <a href="#" class="btn btn-light btn--check">Check it</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                            <div class="card card-bg--warning text-light">
-                                <div class="card-body text-center">
-                                    <h4 class="card-title">Title</h4>
-                                    <p class="card-text">
-                                        <div class="card-text__quantity">5</div>
-                                        <div class="card-text__message">report</div>
-                                    </p>
-                                    <a href="#" class="btn btn-light btn--check">Check it</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                            <div class="card card-bg--success text-light">
-                                <div class="card-body text-center">
-                                    <h4 class="card-title">Title</h4>
-                                    <p class="card-text">
-                                        <div class="card-text__quantity">5</div>
-                                        <div class="card-text__message">report</div>
-                                    </p>
-                                    <a href="#" class="btn btn-light btn--check">Check it</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                            <div class="card card-bg--night text-light">
-                                <div class="card-body text-center">
-                                    <h4 class="card-title">Title</h4>
-                                    <p class="card-text">
-                                        <div class="card-text__quantity">5</div>
-                                        <div class="card-text__message">report</div>
-                                    </p>
-                                    <a href="#" class="btn btn-light btn--check">Check it</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-box w-100">
-                        <div class="content-box__title alert alert-light text-dark">Second content box</div>
-                        <div class="row">
-                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                <div class="card card-bg--blue-primary text-light">
-                                    <div class="card-body text-center">
-                                        <h4 class="card-title">Title</h4>
-                                        <p class="card-text">
-                                            <div class="card-text__quantity">5</div>
-                                            <div class="card-text__message">report</div>
-                                        </p>
-                                        <a href="#" class="btn btn-light btn--check">Check it</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                <div class="card card-bg--primary text-light">
-                                    <div class="card-body text-center">
-                                        <h4 class="card-title">Title</h4>
-                                        <p class="card-text">
-                                            <div class="card-text__quantity">5</div>
-                                            <div class="card-text__message">report</div>
-                                        </p>
-                                        <a href="#" class="btn btn-light btn--check">Check it</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                <div class="card card-bg--purple text-light">
-                                    <div class="card-body text-center">
-                                        <h4 class="card-title">Title</h4>
-                                        <p class="card-text">
-                                            <div class="card-text__quantity">5</div>
-                                            <div class="card-text__message">report</div>
-                                        </p>
-                                        <a href="#" class="btn btn-light btn--check">Check it</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                <div class="card card-bg--orange text-light">
-                                    <div class="card-body text-center">
-                                        <h4 class="card-title">Title</h4>
-                                        <p class="card-text">
-                                            <div class="card-text__quantity">5</div>
-                                            <div class="card-text__message">report</div>
-                                        </p>
-                                        <a href="#" class="btn btn-light btn--check">Check it</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="py-2">&nbsp;</div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <div class="card mb-3">
-                                    <div class="card-header">
-                                        <div class="card-header--title"><span class="pr-2"><i class="fas fa-calendar-check"></i></span> Calendar time working</div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="calendar w-100 h-100">
-                                            <div class="calendar-heading">
-                                                <div class="w-100">
-                                                    <div class="form-row">
-                                                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                            <a href="#" class="btn btn-sm btn-primary text-white mt-1">Day</a>
-                                                            <a href="#" class="btn btn-sm btn-primary text-white mt-1">Week</a>
-                                                        </div>
-
-                                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                                            <div class="form-group">
-                                                                <select class="form-control">
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                            <option>lorem</option>
-                                                          </select>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                                            <div class="list-inline mt-1">
-                                                                <div class="list-inline-item"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-chevron-left    "></i></a></div>
-                                                                <div class="list-inline-item"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-chevron-right"></i></a></div>
-                                                                <div class="list-inline-item">
-                                                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#calendar-add"><i class="fas fa-plus-circle"></i></button>
-
-                                                                    <!-- Modal -->
-                                                                    <div class="modal fade" id="calendar-add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                                                                        <div class="modal-dialog" role="document">
-                                                                            <div class="modal-content">
-                                                                                <div class="modal-header">
-                                                                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                          </button>
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                    ...
-                                                                                </div>
-                                                                                <div class="modal-footer">
-                                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-
-                                                                <div class="list-inline-item"><a href="#" class="btn btn-sm btn-primary"><i class="fas fa-calendar-check"></i></a></div>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="calendar-content w-100 text-center py-2">
-                                                The day from <span> 1 </span> to <span> 1 </span>
-                                            </div>
-                                            <div class="row">
-                                                <div class="w-100 bg-light py-2 pl-3">I'm day</div>
-                                                <div class="w-100 pl-3 py-2 d-flex flex-row">
-                                                    <div class="mr-1" style="width: 200px;">I'm Time</div>
-                                                    <div class="pr-2">
-                                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore repellat suscipit explicabo animi, quod natus dolore eaque corporis nisi, amet iusto voluptatem ea odit, reprehenderit facere maxime eos adipisci tenetur.
-                                                        <span class="d-block text-success">I'm status</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="w-100 bg-light py-2 pl-3">I'm day</div>
-                                                <div class="w-100 pl-3 py-2 d-flex flex-row">
-                                                    <div class="mr-1" style="width: 200px;">I'm Time</div>
-                                                    <div class="pr-2">
-                                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore repellat suscipit explicabo animi, quod natus dolore eaque corporis nisi, amet iusto voluptatem ea odit, reprehenderit facere maxime eos adipisci tenetur.
-                                                        <span class="d-block text-success">I'm status</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="w-100 bg-light py-2 pl-3">I'm day</div>
-                                                <div class="w-100 pl-3 py-2 d-flex flex-row">
-                                                    <div class="mr-1" style="width: 200px;">I'm Time</div>
-                                                    <div class="pr-2">
-                                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore repellat suscipit explicabo animi, quod natus dolore eaque corporis nisi, amet iusto voluptatem ea odit, reprehenderit facere maxime eos adipisci tenetur.
-                                                        <span class="d-block text-success">I'm status</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <div class="card-header--title"><span class="pr-2"><i class="fas fa-calendar-check"></i></span> Calendar time working</div>
-                                    </div>
-                                    <div class="card-body text-left w-100">
-                                        <div class="list-group list-group-flush">
-                                            <a href="#" class="list-group-item list-group-item-action"><span class="mr-2"><i class="far fa-file-alt"></i></span>Cras justo odio</a>
-                                            <a href="#" class="list-group-item list-group-item-action"><span class="mr-2"><i class="far fa-file-alt"></i></span>Dapibus ac facilisis in</a>
-                                            <a href="#" class="list-group-item list-group-item-action"><span class="mr-2"><i class="far fa-file-alt"></i></span>Morbi leo risus</a>
-                                            <a href="#" class="list-group-item list-group-item-action"><span class="mr-2"><i class="far fa-file-alt"></i></span>Porta ac consectetur ac</a>
-                                            <a href="#" class="list-group-item list-group-item-action"><span class="mr-2"><i class="far fa-file-alt"></i></span>Vestibulum at eros</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
-
+                    <div class="w-25 bg-dark">
+                        hi
                     </div>
                 </div>
             </div>
-            <!-- End main content -->
         </div>
-        <!-- End Main -->
+        <!-- End main content -->
+
 
         <!-- Script -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js "></script>
@@ -392,10 +193,40 @@
             $(document).ready(function() {
                 $("nav ul li.components").click(function() {
                     $(this).addClass("isActiveMenu").siblings().removeClass("isActiveMenu");
+                    if ($(this).hasClass("isActiveMenu")) {
+                        $(this).children().siblings().removeClass("isActiveItem");
+                    }
+                });
+                $("nav ul ul li").click(function() {
+                    if ($("nav ul li").hasClass("isActiveMenu")) {
+                        $(this).addClass("isActiveItem").siblings().removeClass("isActiveItem");
+                    }
 
                 })
+                $(window).on("resize", function() {
+                    var w = $(window).width();
+                    var curW = 990;
+                    var n = $("nav.sidebar");
+                    var m = $(".main-content");
+                    var i = $("#icon");
+                    var l = "fa-angle-double-left";
+                    var r = "fa-angle-double-right";
+                    var act = "isActiveSideBar";
+                    if (w <= curW) {
+                        n.addClass(act);
+                        n.css("margin-left", "-250px");
+                        m.css("margin-left", "0");
+                        i.addClass(r);
+                        i.removeClass(l);
+                    } else {
+                        n.removeClass(act);
+                        n.css("margin-left", "0");
+                        m.css("margin-left", "250px");
+                        i.removeClass(r);
+                        i.addClass(l);
+                    }
+                })
             });
-
 
             function collapseFunc() {
                 var n = $("nav.sidebar");

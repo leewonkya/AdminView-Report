@@ -1,75 +1,145 @@
 .navbar {
+    padding: 0 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size-adjust: $text-size;
+    background: #438eb9 !important;
     .rotateIcon {
         transform: rotateX(-180deg);
     }
-    box-shadow: $shadow;
     #searchItem {
-        font-family: 'Times New Roman', Times, serif;
-        font-size-adjust: $text-size;
-        width: 350px;
+        width: 250px;
     }
     #searchItem:focus {
-        width: 450px !important;
+        width: 350px !important;
         transition: all .5s ease !important;
+    }
+    ul.navbar-nav {
+        .nav-item {
+            margin-top: 3px;
+            margin-right: 5px;
+            .notification,
+            .unsigned {
+                color: #fff;
+                padding: 5px 10px;
+                cursor: pointer;
+                position: relative;
+                padding-bottom: 4px !important;
+                .badge {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    content: '';
+                    font-size: 12px;
+                    font-weight: 400;
+                    background-color: $nt-message-bg;
+                    padding: 2px 5px;
+                    border-radius: 50%;
+                    text-align: center;
+                }
+                &:hover {
+                    background-color: #1a7cb4;
+                }
+            }
+        }
+        .user-box {
+            cursor: pointer;
+            .user-avt {
+                width: 43px;
+                margin-right: 5px;
+            }
+            .user-profile {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .info-box {
+                color: #fff;
+                line-height: 16px;
+                .user-name {
+                    font-size: 13px;
+                    padding: 0;
+                    margin: 0;
+                    padding-bottom: 3px;
+                }
+            }
+        }
     }
 }
 
 .wrapper {
-    margin-top: 3.5rem;
+    margin-top: 2.4rem;
     width: 100%;
     nav,
     .main-content {
-        transition: all .5s;
+        transition: all .3s;
     }
     nav {
         position: fixed;
         height: 100%;
         max-width: 250px;
         min-width: 250px;
-        box-shadow: $shadow;
-        background: #fff;
+        border-right: solid .5px#e5e5e5;
+        background: rgba(242, 242, 242, .5);
+        z-index: 1;
         ul {
+            ul li.isActiveItem {
+                &::before {
+                    content: ">";
+                    position: absolute;
+                    left: 10px;
+                    visibility: visible;
+                    font-family: $poppins;
+                    color: red;
+                    font-weight: bold;
+                    z-index: 999;
+                }
+                // border-left: solid 4px $primary-color;
+                a {
+                    color: $primary-color;
+                }
+                background-color: #F3F7FA;
+            }
             li {
-                line-height: 45px;
+                line-height: 35px;
                 border-top: solid 1px rgba($color: #000000, $alpha: .1);
                 cursor: pointer;
                 &.isActiveMenu {
-                    border-right: 5px solid $primary-color;
+                    border-right: 3px solid $primary-color;
+                    background-color: #fff;
+                }
+                a.components-item {
+                    text-transform: uppercase;
                 }
                 a {
                     color: $text-color;
                     text-decoration: none;
-                    padding-left: 20px;
+                    padding-left: 15px;
                     font-size: 14px;
-                    font-family: $poppins;
+                    font-family: Arial, Helvetica, serif;
                     font-weight: 500;
                     position: relative;
                     display: block;
                     transition: all .3s;
                     &:hover {
-                        background-color: rgba($color: #000000, $alpha: .1);
-                        border-left: solid 4px $primary-color;
-                    }
-                    &:hover>nav ul li span {
-                        margin-left: 20px;
+                        color: $primary-color;
+                        // border-left: solid 4px $primary-color;
                     }
                     .isActiveIcon {
                         transform: rotateZ(-90deg);
                     }
                 }
                 a.components-sub--link {
-                    padding-left: 45px;
+                    padding-left: 30px;
                     &::before {
                         position: absolute;
                         content: ">";
-                        left: 0;
-                        transition: .5s ease;
+                        left: 10px;
                         visibility: hidden;
                         font-size: 15px;
+                        font-family: $poppins;
                     }
                     &:hover::before {
+                        z-index: 100;
                         visibility: visible;
-                        left: 20px;
                     }
                 }
                 &:last-child {
@@ -80,30 +150,7 @@
     }
     .main-content {
         margin-left: 250px;
-        .heading-box {
-            background-color: rgba(255, 255, 255, 0.75);
-            &__icon {
-                width: 60px;
-                height: 60px;
-                font-size: 2rem;
-                box-shadow: $shadow-icon;
-                line-height: 60px;
-                margin-right: 20px;
-                color: rgba(255, 192, 203, .7);
-                border-radius: 5px;
-                background: #fff;
-            }
-            &__content {
-                width: 70%;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                .heading-box__title {
-                    font-size: $title-main-size;
-                }
-            }
-        }
         .content-box {
-            margin-top: 15px;
-            margin-bottom: 15px;
             .card {
                 &-bg--danger {
                     background-image: $bg-danger;
@@ -149,6 +196,18 @@
                     &--title {
                         font-size: 17px;
                     }
+                }
+                .calendar-day {
+                    background: $bg-light;
+                    font-family: $poppins;
+                    font-weight: 500;
+                    color: $primary-color;
+                }
+                .calendar-time {
+                    font-weight: 500;
+                }
+                .calendar-content {
+                    font-size: 14px;
                 }
             }
         }
